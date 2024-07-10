@@ -1,0 +1,22 @@
+.button {
+	background-color: var(--blue);
+	width: 100%;
+	padding: 0.625rem;
+	border-radius: 0.25rem;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	font-weight: 500;
+	margin-bottom: 1.25rem;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+	color: #fff;
+	&:hover {
+		background-color: #1e40af;
+	}
+	&:disabled {
+		cursor: not-allowed;
+		background-color: var(--light-grey);
+		color: var(--light-slate-grey);
+	}
+}

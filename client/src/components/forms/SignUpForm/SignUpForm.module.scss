@@ -1,0 +1,21 @@
+.decorative-lines {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 0;
+		width: calc(50% - 22px);
+		height: 1px;
+		background: rgba(0, 0, 0, 0.3);
+	}
+	&:after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		right: 0;
+		width: calc(50% - 22px);
+		height: 1px;
+		background: rgba(0, 0, 0, 0.3);
+	}
+}

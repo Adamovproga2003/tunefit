@@ -1,0 +1,58 @@
+.controller {
+	margin-bottom: 1rem;
+	&_wrapper {
+		position: relative;
+		& > label {
+			display: block;
+			font-size: 0.75rem /* 12px */;
+			line-height: 1rem /* 16px */;
+			font-weight: 600;
+			top: 0;
+			left: 0;
+			padding-left: 14px;
+			padding-top: 22px;
+			position: absolute;
+			font-size: 16px;
+			color: #9ca3af;
+			font-weight: normal;
+
+			transition: all 0.3s ease-in-out;
+			pointer-events: none;
+			&.active {
+				transform: translateY(-1rem);
+				font-size: 12px;
+			}
+		}
+		& > input {
+			padding-block: 24px 10px;
+			transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+			&.errorInput {
+				border-color: var(--red);
+				&:focus {
+					border-color: var(--red);
+					box-shadow: 0 0 0 0.25rem var(--light-red);
+				}
+			}
+			&:focus-within ~ label,
+			&:focus ~ label {
+				transform: translateY(-1rem);
+				font-size: 12px;
+			}
+			&:focus {
+				border-color: #86b7fe;
+				box-shadow: 0 0 0 0.25rem #0d6efd40;
+			}
+		}
+		& > button {
+			position: absolute;
+			top: 50%;
+			right: 5px;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&_error {
+		color: var(--red);
+		font-size: 14px;
+		margin-left: 14px;
+	}
+}
